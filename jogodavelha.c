@@ -116,51 +116,46 @@ void Inicio(char matriz[3][3])
 }
 void analise(char matriz[3][3])
 {
-    if (matriz[0][0] == 'X' && matriz[0][1] == 'X' && matriz[0][2] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+    for(i=0;i<=1;i++){
 
-    else if (matriz[1][0] == 'X' && matriz[1][1] == 'X' && matriz[1][2] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+        if (matriz[0][0] == player[i].opcao && 
+            matriz[0][1] == player[i].opcao && 
+            matriz[0][2] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[2][0] == 'X' && matriz[2][1] == 'X' && matriz[2][2] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+        if (matriz[1][0] == player[i].opcao && 
+            matriz[1][1] == player[i].opcao && 
+            matriz[1][2] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[0][0] == 'X' && matriz[1][1] == 'X' && matriz[2][2] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+        if (matriz[2][0] == player[i].opcao && 
+            matriz[2][1] == player[i].opcao && 
+            matriz[2][2] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[2][0] == 'X' && matriz[1][1] == 'X' && matriz[0][2] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+        if (matriz[0][0] == player[i].opcao && 
+            matriz[1][1] == player[i].opcao && 
+            matriz[2][2] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[0][1] == 'X' && matriz[1][1] == 'X' && matriz[2][1] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+        if (matriz[2][0] == player[i].opcao && 
+            matriz[1][1] == player[i].opcao && 
+            matriz[0][2] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[0][0] == 'X' && matriz[1][0] == 'X' && matriz[2][0] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
+        if (matriz[0][1] == player[i].opcao && 
+            matriz[1][1] == player[i].opcao && 
+            matriz[2][1] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[0][2] == 'X' && matriz[1][2] == 'X' && matriz[2][2] == 'X')
-        strcpy(player[0].vencedor, "WINNER");
-    ///////////////////////////////////////////////////////////////////////////
-    if (matriz[0][0] == 'O' && matriz[0][1] == 'O' && matriz[0][2] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
+        if (matriz[0][0] == player[i].opcao && 
+            matriz[1][0] == player[i].opcao && 
+            matriz[2][0] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
 
-    else if (matriz[1][0] == 'O' && matriz[1][1] == 'O' && matriz[1][2] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
-
-    else if (matriz[2][0] == 'O' && matriz[2][1] == 'O' && matriz[2][2] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
-
-    else if (matriz[0][0] == 'O' && matriz[1][1] == 'O' && matriz[2][2] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
-
-    else if (matriz[2][0] == 'O' && matriz[1][1] == 'O' && matriz[0][2] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
-
-    else if (matriz[0][1] == 'O' && matriz[1][1] == 'O' && matriz[2][1] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
-
-    else if (matriz[0][0] == 'O' && matriz[1][0] == 'O' && matriz[2][0] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
-
-    else if (matriz[0][2] == 'O' && matriz[1][2] == 'O' && matriz[2][2] == 'O')
-        strcpy(player[1].vencedor, "WINNER");
+        if (matriz[0][2] == player[i].opcao && 
+            matriz[1][2] == player[i].opcao && 
+            matriz[2][2] == player[i].opcao)
+                strcpy(player[i].vencedor, "WINNER");
+	}
 }
